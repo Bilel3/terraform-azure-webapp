@@ -1,0 +1,27 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+
+# Variables (can contain secrets)
+*.tfvars
+
+# Local override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI config
+.terraformrc
+terraform.rc
+
+# Lock backup (not needed)
+.terraform.lock.hcl.backup
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
