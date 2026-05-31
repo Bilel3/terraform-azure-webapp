@@ -5,13 +5,7 @@ variable "subscription_id" {
 
 variable "environment" {
   description = "Environment name"
-
   type = string
-
-  validation {
-    condition     = contains(["dev", "prd"], lower(var.environment))
-    error_message = "Environment must be either 'dev' or 'prd'."
-  }
 }
 
 variable "location" {
