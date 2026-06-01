@@ -33,3 +33,12 @@ module "network" {
   vnet_address_space  = var.vnet_address_space
   tags                = local.common_tags
 }
+
+module "app_service" {
+  source = "../../modules/app-service"
+
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  environment         = var.environment
+  tags                = local.common_tags
+}

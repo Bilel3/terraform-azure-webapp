@@ -8,6 +8,17 @@ variable "location" {
   type        = string
 }
 
+variable "service_plan_sku_name" {
+  description = "App Service Plan SKU name (for example: B1, S1, P1v2)"
+  type        = string
+  default     = "S1"
+
+  validation {
+    condition     = contains(["B1", "S1", "P1v2"], var.service_plan_sku_name)
+    error_message = "service_plan_sku_name must be one of: B1, S1, P1v2."
+  }
+}
+
 variable "environment" {
   description = "Environment name used for slot naming (dev/prd)"
   type        = string

@@ -5,7 +5,7 @@ variable "subscription_id" {
 
 variable "environment" {
   description = "Environment name"
-  type = string
+  type        = string
 }
 
 variable "location" {
